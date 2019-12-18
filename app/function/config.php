@@ -4,6 +4,6 @@
 	$server = "localhost";
 	$username = "root";
 	$password = "";
-	$database = "surat_menyurat";
+	$database = "surat_masuk_keluar";
 
 	$koneksi = mysqli_connect($server,$username,$password,$database) or die("koneksi ke database gagal");

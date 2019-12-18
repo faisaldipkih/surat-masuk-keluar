@@ -18,7 +18,7 @@
 ?>
 
     <!-- Jquery JS-->
-    <script src="<?= BASE_URL."vendor/jquery-3.2.1.min.js" ?>"></script>
+    <script src="<?= BASE_URL."vendor/jquery-3.3.1.min.js" ?>"></script>
     <!-- Bootstrap JS-->
     <script src="<?= BASE_URL."vendor/bootstrap-4.1/popper.min.js" ?>"></script>
     <script src="<?= BASE_URL."vendor/bootstrap-4.1/bootstrap.min.js" ?>"></script>
@@ -37,6 +37,9 @@
     <script src="<?= BASE_URL."vendor/chartjs/Chart.bundle.min.js" ?>"></script>
     <script src="<?= BASE_URL."vendor/select2/select2.min.js" ?>">
     </script>
+    <script src="<?= BASE_URL."asset/DataTables/js/jquery.dataTables.min.js" ?>"></script>
+    <script src="<?= BASE_URL."asset/DataTables/js/dataTables.bootstrap4.min.js" ?>"></script>
+    <script src="<?= BASE_URL."js/tinymce/tinymce.min.js" ?>"></script>
 
     <!-- Main JS-->
     <script src="<?= BASE_URL."js/main.js" ?>"></script>

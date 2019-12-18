@@ -7,8 +7,6 @@ echo "<script>
         </script>";
 }
 
-var_dump($url);
-
 ?>
 
     <div class="page-wrapper">
@@ -18,7 +16,7 @@ var_dump($url);
                     <div class="login-content">
                         <div class="login-logo">
                             <a href="#">
-                                <img src="<?= BASE_URL."images/icon/logo.png" ?>" alt="CoolAdmin">
+                                <img src="<?= BASE_URL."images/icon/garut.png" ?>">
                             </a>
                         </div>
                 <?php
@@ -43,7 +41,7 @@ var_dump($url);
                                     <label>Password</label>
                                     <input class="au-input au-input--full" type="password" name="password" placeholder="Password">
                                 </div>
-                                <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">sign in</button>
+                                <button class="au-btn au-btn--block au-btn--blue m-b-20" type="submit">sign in</button>
                             </form>
                         </div>
                     </div>

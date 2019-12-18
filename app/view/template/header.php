@@ -29,6 +29,7 @@
     <link href="<?= BASE_URL."vendor/slick/slick.css" ?>" rel="stylesheet" media="all">
     <link href="<?= BASE_URL."vendor/select2/select2.min.css" ?>" rel="stylesheet" media="all">
     <link href="<?= BASE_URL."vendor/perfect-scrollbar/perfect-scrollbar.css" ?>" rel="stylesheet" media="all">
+    <link href="<?= BASE_URL."asset/DataTables/css/dataTables.bootstrap4.min.css" ?>" rel="stylesheet" media="all">
 
     <!-- Main CSS-->
     <link href="<?= BASE_URL."css/theme.css" ?>" rel="stylesheet" media="all">
@@ -46,7 +47,7 @@
                 <div class="container-fluid">
                     <div class="header-mobile-inner">
                         <a class="logo" href="index.html">
-                            <img src="images/icon/logo.png" alt="CoolAdmin" />
+                            <img src="<?= BASE_URL."images/icon/garut.png" ?>" alt="CoolAdmin" />
                         </a>
                         <button class="hamburger hamburger--slider" type="button">
                             <span class="hamburger-box">
@@ -59,97 +60,70 @@
             <nav class="navbar-mobile">
                 <div class="container-fluid">
                     <ul class="navbar-mobile__list list-unstyled">
+                        <li>
+                            <a href="<?= BASE_URL."beranda" ?>">
+                                <i class="fas fa-clipboard-list"></i>Dashboard</a>
+                        </li>
+                <?php
+                    if($jabatan_login == "admin"){
+                ?>
                         <li class="has-sub">
                             <a class="js-arrow" href="#">
-                                <i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                                <i class="fas fa-user-plus"></i>Akun</a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                                 <li>
-                                    <a href="index.html">Dashboard 1</a>
+                                    <a href="<?= BASE_URL."akun/ketua" ?>"><i class="fas fa-plus"></i>Ketua</a>
                                 </li>
                                 <li>
-                                    <a href="index2.html">Dashboard 2</a>
-                                </li>
-                                <li>
-                                    <a href="index3.html">Dashboard 3</a>
-                                </li>
-                                <li>
-                                    <a href="index4.html">Dashboard 4</a>
+                                    <a href="<?= BASE_URL."akun/staff" ?>"><i class="fas fa-plus"></i>Staff</a>
                                 </li>
                             </ul>
                         </li>
+                <?php
+                    }
+                ?>
+                <?php
+                    if($jabatan_login == "SUBBAG Umum & Kepegawaian" || $jabatan_login == "Kepala Dinas Pendidikan"){
+                ?>
                         <li>
-                            <a href="chart.html">
-                                <i class="fas fa-chart-bar"></i>Charts</a>
+                            <a href="<?= BASE_URL."surat_masuk" ?>">
+                                <i class="far fa-envelope-open"></i>Surat Masuk</a>
                         </li>
+                <?php
+                    }
+                    if($jabatan_login != "admin"){
+                ?>
                         <li>
-                            <a href="table.html">
-                                <i class="fas fa-table"></i>Tables</a>
+                            <a href="<?= BASE_URL."disposisi" ?>">
+                                <i class="fas fa-clipboard-list"></i>Disposisi</a>
                         </li>
-                        <li>
-                            <a href="form.html">
-                                <i class="far fa-check-square"></i>Forms</a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-calendar-alt"></i>Calendar</a>
-                        </li>
-                        <li>
-                            <a href="map.html">
-                                <i class="fas fa-map-marker-alt"></i>Maps</a>
-                        </li>
+                <?php
+                    }
+                    if($jabatan_login != "admin" || $jabatan_login != "Kepala Dinas Pendidikan"){
+                ?>
                         <li class="has-sub">
                             <a class="js-arrow" href="#">
-                                <i class="fas fa-copy"></i>Pages</a>
+                                <i class="far fa-envelope"></i>Surat Keluar</a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                                 <li>
-                                    <a href="login.html">Login</a>
+                                    <a href="<?= BASE_URL."surat_keluar/rekomendasi" ?>"><i class="fas fa-plus"></i>Rekomendasi</a>
                                 </li>
                                 <li>
-                                    <a href="register.html">Register</a>
+                                    <a href="<?= BASE_URL."surat_keluar/izin_penelitian" ?>"><i class="fas fa-plus"></i>Izin Penelitian</a>
                                 </li>
                                 <li>
-                                    <a href="forget-pass.html">Forget Password</a>
+                                    <a href="<?= BASE_URL."surat_keluar/perintah_tugas" ?>"><i class="fas fa-plus"></i>Perintah Tugas</a>
+                                </li><li>
+                                    <a href="<?= BASE_URL."surat_keluar/nota_dinas" ?>"><i class="fas fa-plus"></i>Nota Dinas</a>
                                 </li>
                             </ul>
                         </li>
-                        <li class="has-sub">
-                            <a class="js-arrow" href="#">
-                                <i class="fas fa-desktop"></i>UI Elements</a>
-                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                                <li>
-                                    <a href="button.html">Button</a>
-                                </li>
-                                <li>
-                                    <a href="badge.html">Badges</a>
-                                </li>
-                                <li>
-                                    <a href="tab.html">Tabs</a>
-                                </li>
-                                <li>
-                                    <a href="card.html">Cards</a>
-                                </li>
-                                <li>
-                                    <a href="alert.html">Alerts</a>
-                                </li>
-                                <li>
-                                    <a href="progress-bar.html">Progress Bars</a>
-                                </li>
-                                <li>
-                                    <a href="modal.html">Modals</a>
-                                </li>
-                                <li>
-                                    <a href="switch.html">Switchs</a>
-                                </li>
-                                <li>
-                                    <a href="grid.html">Grids</a>
-                                </li>
-                                <li>
-                                    <a href="fontawesome.html">Fontawesome Icon</a>
-                                </li>
-                                <li>
-                                    <a href="typo.html">Typography</a>
-                                </li>
-                            </ul>
+                <?php
+                    }
+                ?>
+                        <li>
+                            <a href="<?= BASE_URL."agenda" ?>">
+                                <i class="fas fa-map-marker-alt"></i>Agenda</a>
                         </li>
                     </ul>
                 </div>
@@ -161,103 +135,76 @@
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
                 <a href="#">
-                    <img src="images/icon/logo.png" alt="Cool Admin" />
+                    <img src="<?= BASE_URL."images/icon/garut.png" ?>" alt="Cool Admin" />
                 </a>
             </div>
             <div class="menu-sidebar__content js-scrollbar1">
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
-                        <li class="active has-sub">
-                            <a class="js-arrow" href="#">
-                                <i class="fas fa-tachometer-alt"></i>Dashboard</a>
-                            <ul class="list-unstyled navbar__sub-list js-sub-list">
-                                <li>
-                                    <a href="index.html">Dashboard 1</a>
-                                </li>
-                                <li>
-                                    <a href="index2.html">Dashboard 2</a>
-                                </li>
-                                <li>
-                                    <a href="index3.html">Dashboard 3</a>
-                                </li>
-                                <li>
-                                    <a href="index4.html">Dashboard 4</a>
-                                </li>
-                            </ul>
-                        </li>
                         <li>
-                            <a href="chart.html">
-                                <i class="fas fa-chart-bar"></i>Charts</a>
+                            <a href="<?= BASE_URL."beranda" ?>">
+                                <i class="fas fa-clipboard-list"></i>Dashboard</a>
                         </li>
-                        <li>
-                            <a href="table.html">
-                                <i class="fas fa-table"></i>Tables</a>
-                        </li>
-                        <li>
-                            <a href="form.html">
-                                <i class="far fa-check-square"></i>Forms</a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-calendar-alt"></i>Calendar</a>
-                        </li>
-                        <li>
-                            <a href="map.html">
-                                <i class="fas fa-map-marker-alt"></i>Maps</a>
-                        </li>
+                <?php
+                    if($jabatan_login == "admin"){
+                ?>
                         <li class="has-sub">
                             <a class="js-arrow" href="#">
-                                <i class="fas fa-copy"></i>Pages</a>
+                                <i class="fas fa-user-plus"></i>Akun</a>
                             <ul class="list-unstyled navbar__sub-list js-sub-list">
                                 <li>
-                                    <a href="login.html">Login</a>
+                                    <a href="<?= BASE_URL."akun/ketua" ?>"><i class="fas fa-plus"></i>Ketua</a>
                                 </li>
                                 <li>
-                                    <a href="register.html">Register</a>
-                                </li>
-                                <li>
-                                    <a href="forget-pass.html">Forget Password</a>
+                                    <a href="<?= BASE_URL."akun/staff" ?>"><i class="fas fa-plus"></i>Staff</a>
                                 </li>
                             </ul>
                         </li>
+                <?php
+                    }
+                ?>
+                <?php
+                    if($jabatan_login == "SUBBAG Umum & Kepegawaian" || $jabatan_login == "Kepala Dinas Pendidikan"){
+                ?>
+                        <li>
+                            <a href="<?= BASE_URL."surat_masuk" ?>">
+                                <i class="far fa-envelope-open"></i>Surat Masuk</a>
+                        </li>
+                <?php
+                    }
+                    if($jabatan_login != "admin"){
+                ?>
+                        <li>
+                            <a href="<?= BASE_URL."disposisi" ?>">
+                                <i class="fas fa-clipboard-list"></i>Disposisi</a>
+                        </li>
+                <?php
+                    }
+                    if($jabatan_login != "admin" && $jabatan_login != "Kepala Dinas Pendidikan"){
+                ?>
                         <li class="has-sub">
                             <a class="js-arrow" href="#">
-                                <i class="fas fa-desktop"></i>UI Elements</a>
+                                <i class="far fa-envelope"></i>Surat Keluar</a>
                             <ul class="list-unstyled navbar__sub-list js-sub-list">
                                 <li>
-                                    <a href="button.html">Button</a>
+                                    <a href="<?= BASE_URL."surat_keluar/rekomendasi" ?>"><i class="fas fa-plus"></i>Rekomendasi</a>
                                 </li>
                                 <li>
-                                    <a href="badge.html">Badges</a>
+                                    <a href="<?= BASE_URL."surat_keluar/izin_penelitian" ?>"><i class="fas fa-plus"></i>Izin Penelitian</a>
                                 </li>
                                 <li>
-                                    <a href="tab.html">Tabs</a>
-                                </li>
-                                <li>
-                                    <a href="card.html">Cards</a>
-                                </li>
-                                <li>
-                                    <a href="alert.html">Alerts</a>
-                                </li>
-                                <li>
-                                    <a href="progress-bar.html">Progress Bars</a>
-                                </li>
-                                <li>
-                                    <a href="modal.html">Modals</a>
-                                </li>
-                                <li>
-                                    <a href="switch.html">Switchs</a>
-                                </li>
-                                <li>
-                                    <a href="grid.html">Grids</a>
-                                </li>
-                                <li>
-                                    <a href="fontawesome.html">Fontawesome Icon</a>
-                                </li>
-                                <li>
-                                    <a href="typo.html">Typography</a>
+                                    <a href="<?= BASE_URL."surat_keluar/perintah_tugas" ?>"><i class="fas fa-plus"></i>Perintah Tugas</a>
+                                </li><li>
+                                    <a href="<?= BASE_URL."surat_keluar/nota_dinas" ?>"><i class="fas fa-plus"></i>Nota Dinas</a>
                                 </li>
                             </ul>
+                        </li>
+                <?php
+                    }
+                ?>
+                        <li>
+                            <a href="<?= BASE_URL."agenda" ?>">
+                                <i class="fas fa-map-marker-alt"></i>Agenda</a>
                         </li>
                     </ul>
                 </nav>
@@ -314,7 +261,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="account-wrap ml-5">
+                                <div class="account-wrap">
                                     <div class="account-item clearfix js-item-menu">
                                         <div class="content">
                                             <a class="js-acc-btn" href="#">john doe</a>
