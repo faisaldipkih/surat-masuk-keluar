@@ -1668,3 +1668,12 @@
   }
 
 })(jQuery);
+
+$(document).ready(function(){
+    $('#data').DataTable();
+});
+
+tinymce.init({
+  selector: 'textarea',
+  height: 500
+});

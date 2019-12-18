@@ -5,6 +5,7 @@
 
 	$url = isset($_GET['url']) ? $_GET['url'] : false;
 	$url = parseUrl($url);
+	$jabatan_login = isset($_SESSION["jabatan"]) ? $_SESSION["jabatan"] : false;
 
 	$page = file_exists("app/view/$url[0].php") ? $url[0] : "login";
 
